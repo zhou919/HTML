@@ -7,47 +7,10 @@ TR/xhtml1/DTD/xhtml1-transitional.dtd">
 </head>
 <body>
 <script>
-//验证密码强度
-function checkStrength()
-{
-	var strength = document.getElementById("strength");
-	var psw1 = document.getElementById("psw1").value;
-	var length = psw1.length;
-	if (length<=6)
-	{
-		strength.innerHTML="用户";
-	}
-	else if(length>=3&&length<6)
-	{
-		strength.innerHTML="中";
-	}
-	else
-	{
-		strength.innerHTML="强";
-	}
-}
-//用户名
-function checkusername()
-{
-	var username = document.getElementById("username").value;
-	var length = username.length;
-	var strength = document.getElementById("strength");
-	if(length<=6)
-	{
-		strength.innerHTML='用户名应大于6位';
-	}
-}
-//验证两次输入密码是否一致
-function checkPSW()
-{
-	var psw1 = document.getElementById("psw1").value;
-	var psw2 = document.getElementById("psw2").value;
-	var pswInfo = document.getElementById("pswInfo");
-	if(psw1!=psw2)
-	{
-		pswInfo.innerHTML='两次输入的密码必须一致';
-	}
-}
+
+
+
+
 //注册方法
 function reg()
 {
@@ -83,8 +46,7 @@ function reg()
 	<table width='100%'>
 		<tr>
 			<td width='20%'>用户名</td>
-			<td width='40%'><input id="username" type="text" required="true"onkeyup=
-"checkusername()"/></td>
+			<td width='40%'><input id="username" type="text" required="true" pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{7,}$"/><br> <span style="color:red;font-size:12px">必须为英文和数字组合,且长度大于6位</td>
 			<td width='40%'><font color="red">*</font><span id="strength"></span></td>
 		</tr>
 		<tr>
