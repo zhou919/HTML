@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  border-radius: 25px;
+  
+  width: 100px;
+  height: 100px;
+  resize: both;
+  overflow: auto;
+  
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  
+  opacity: 1.0;
+  
+  float: left;
+}
+
+div:hover{
+ opacity: 0.5;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+</style>
+</head>
+<body>
+
+<p><b>注释：</b>动画，透明度，圆角边框，用户界面，浮动，伪类</p>
+
+<div></div>
+
+<p><b>注释：</b>动画会一直持续。</p>
+
+</body>
+</html>
